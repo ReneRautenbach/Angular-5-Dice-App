@@ -1,0 +1,17 @@
+#sidebar {
+    background-color: #666;
+    float:left;
+    color: #fff;
+}
+
+#sidebar > button {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+}
+#sidebar > div {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}

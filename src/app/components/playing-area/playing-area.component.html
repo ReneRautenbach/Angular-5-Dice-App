@@ -1,0 +1,9 @@
+<app-die-control *ngFor="let die of dice;let i = index;" 
+[value]="die.value" 
+[imageUrl]="die.imageUrl"
+[index]="i"
+[left]="playingAreaDimension.left" 
+[right]="playingAreaDimension.right" 
+[top]="playingAreaDimension.top" 
+[bottom]="playingAreaDimension.bottom">
+</app-die-control>
