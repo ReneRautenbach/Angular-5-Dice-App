@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { PlayingAreaDirective } from '../../directives/playing-area.directive';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core'; 
 import { Die } from '../../die-control/die-control.model';
 import { Observable } from 'rxjs/Observable';
 import { PlayingAreaDimension } from '../../models/playingAreaDim.model';

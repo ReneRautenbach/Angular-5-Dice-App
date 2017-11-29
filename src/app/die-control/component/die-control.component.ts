@@ -69,4 +69,38 @@ export class DieComponent implements OnInit  {
     this.ypos = Math.floor(Math.random() * (this.maxY - this.minY  + 1)) + this.minY; 
   }
 
+  public  getDieWidth() {
+    return this.dieWidth;
+  }
+
+
+  public  getDieHeight() {
+    return this.dieHeight;
+  }
+
+
+  public  getXpos() {
+    return this.xpos;
+  }
+
+  public  getYpos() {
+    return this.ypos;
+  }
+
+  public  getMinX() {
+    return this.minX;
+  }
+
+  public  getMaxX() {
+    return this.maxX;
+  }
+
+  public  getMinY() {
+    return this.minY;
+  }
+
+  public  getMaxY() {
+    return this.maxY;
+  } 
+  
 }

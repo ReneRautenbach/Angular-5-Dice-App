@@ -36,15 +36,15 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AppComponent implements OnInit {
 
-  private sidebarHeight: number = 500;
-  private sidebarWidth: number = 150;
+  public sidebarHeight: number = 500;
+  public sidebarWidth: number = 150;
 
-  private playingAreaDimension: PlayingAreaDimension;
+  public playingAreaDimension: PlayingAreaDimension;
  
   // the total sum of the dice on the playing area to be displayed on the navigation bar
-  private total: number;   
+  public total: number;   
   // an observable array of dice to be added to the playing area
-  private dice$: Observable<Die[]>;  
+  public dice$: Observable<Die[]>;  
 
   constructor(private dieControlService: DieControlService) { 
     // set the playing area size
@@ -63,21 +63,22 @@ export class AppComponent implements OnInit {
 
   // called when addDie button clicked on the side-nav
   // creates a die and add it to the dice array
-  private OnAddDieClick($event: any) { 
+  public OnAddDieClick($event: any) { 
     this.dieControlService.addDie(); 
   }
 
   // called when reRollDie button clicked on the side-nav
   // assign a new value to each die and update the total sum
-  private OnAddReRollDieClick($event: any) { 
+  public OnAddReRollDieClick($event: any) { 
     this.dieControlService.reRollAll();
   }
 
   // called when reRollDie button clicked on the side-nav
   // reset the playing area by setting the dice = [] and sum to 0
-  private OnResetPlayingArea($event: any) {  
+  public OnResetPlayingArea($event: any) {  
     this.dieControlService.reset();
     this.start();
   }
   
+
 }

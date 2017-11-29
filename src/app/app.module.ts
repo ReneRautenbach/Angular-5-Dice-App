@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
  
 import { AppComponent } from './app.component';
 import { PlayingAreaComponent } from './components/playing-area/playing-area.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
-import { PlayingAreaDirective } from './directives/playing-area.directive';
+import { SideNavComponent } from './components/side-nav/side-nav.component'; 
 
 import { DieControlModule } from './die-control/die-control.module';
 import { DieControlService } from './die-control.service';
