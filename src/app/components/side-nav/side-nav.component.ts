@@ -5,12 +5,12 @@ import { Component, OnInit, EventEmitter, Output , Input } from '@angular/core';
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.css']
 })
-export class SideNavComponent {
+export class SideNavComponent implements OnInit {
 
   constructor() { }
 
   @Input()
-  total: number =0;
+  total: number;
 
   @Input()
   sidebarHeight: number;
@@ -27,6 +27,10 @@ export class SideNavComponent {
   @Output()
   resetPlayingArea:EventEmitter<any> = new EventEmitter<any>();
  
+  ngOnInit(){
+    this.total = 0;
+  }
+
   add() { 
     this.addDie.emit();
   }

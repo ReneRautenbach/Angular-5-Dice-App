@@ -57,8 +57,8 @@ export class AppComponent implements OnInit {
 
   private start() {
     // set the observable dice array
-    this.dice$ = this.dieControlService.getDice();   
-    //this.dieControlService.getTotal().subscribe(result => { console.log(result); this.total = result; });
+    this.dice$ = this.dieControlService.getDice();  
+    this.dieControlService.getTotal().subscribe(result => { console.log(result); this.total = result; });
   }
 
   // called when addDie button clicked on the side-nav

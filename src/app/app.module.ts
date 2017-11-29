@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
  
 import { AppComponent } from './app.component';
 import { PlayingAreaComponent } from './components/playing-area/playing-area.component';
@@ -9,6 +10,11 @@ import { PlayingAreaDirective } from './directives/playing-area.directive';
 import { DieControlModule } from './die-control/die-control.module';
 import { DieControlService } from './die-control.service';
  
+const appRoutes: Routes = [
+  { path: 'main', component: AppComponent },  
+  { path: '**', component: AppComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +24,11 @@ import { DieControlService } from './die-control.service';
   ],
   imports: [
     BrowserModule,
-    DieControlModule
+    DieControlModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false } // <-- debugging purposes only
+    )
   ],
   providers: [
     DieControlService

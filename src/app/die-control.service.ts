@@ -13,24 +13,24 @@ export class DieControlService {
 
    //SUBJECT IS LIKE AN OBSERVABLE, BUT IT CAN FIRE EVENTS FOR OBSERVABLE
    private totalSource = new Subject<any>();
-   //OBSERVABLE, CAN SUBSCRIBE TO - PUBLIC
-   total$ = this.totalSource.asObservable();
 
   constructor() { 
     this.dice = []; 
     this.total = 0;
   }  
 
+  // returns an observable array of die
   getDice() : Observable<Die[]> {
     return of(this.dice);
   }
  
+  // returns an observable total value
   getTotal(): Observable<number> {
     return this.totalSource.asObservable();
-}
+  }
 
   addDie() { 
-    let die = new Die(); 
+    let die = new Die();  
     this.dice.push( die );
     this.addTotal(die.getValue());
   }
@@ -38,7 +38,7 @@ export class DieControlService {
   reset() { 
     this.total = 0;
     this.dice = [];
-    this.totalSource.next(this.total);
+     this.totalSource.next(this.total);
   }
 
   public reroll(index) {
